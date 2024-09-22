@@ -147,7 +147,7 @@ function App() {
                 </div>
                 <div>
                   {state.giving && (
-                    <ul className="h-[150px] flex flex-col justify-evenly items-center w-full border border-red-500 mt-2 p-2">
+                    <ul className="h-[150px] flex flex-col justify-evenly items-center w-full mt-2 p-2">
                       <li>Donation </li>
                       <li>Volunteer </li>
                       <li>Make a Gift</li>
