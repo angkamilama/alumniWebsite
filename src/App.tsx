@@ -54,6 +54,18 @@ function reducer(state, action) {
         stories: false,
       };
     }
+    case "closeAll": {
+      return {
+        ...state,
+        about: false,
+        events: false,
+        gallery: false,
+        giving: false,
+        stories: false,
+      };
+    }
+    default:
+      return state;
   }
 }
 
@@ -71,6 +83,9 @@ function App() {
 
   const handleShowMenu = () => {
     setShowMenu((showMenu) => !showMenu);
+    if (showMenu) {
+      dispatch({ type: "closeAll" });
+    }
   };
   return (
     <div className="box-border relative">
@@ -224,10 +239,10 @@ function App() {
         {/* normal Menu */}
         <div className="md:w-4/6">
           <ul className=" hidden md:flex justify-evenly  items-center ">
-            <li className=" tracking-widest  hover:font-bold ">ABOUT</li>
-            <li className="tracking-wider  group relative">
-              <p className="cursor-pointer hover:font-bold">EVENTS</p>
-              <ul className=" absolute top-full left-[-20px] z-20 border border-slate-300 bg-orange-100/50 hidden group-hover:block w-[125px] h-[500px] flex flex-col justify-between items-center ">
+            <li className=" tracking-widest">ABOUT</li>
+            <li className="tracking-wider group relative">
+              <p className="cursor-pointer ">EVENTS</p>
+              <ul className=" absolute top-full left-[-20px] z-20 border border-slate-300 bg-orange-100/50 hidden group-hover:block w-[125px] h-[150px]  flex-col justify-between items-center ">
                 <li className="w-full p-1 text-center border-slate-400 border-b-2 hover:bg-orange-200">
                   Alumni Calendar
                 </li>
@@ -240,7 +255,7 @@ function App() {
               </ul>
             </li>
             <li className="tracking-wider  group relative">
-              <p className="cursor-pointer hover:font-bold">GIVING</p>
+              <p className="cursor-pointer">GIVING</p>
               <ul className="absolute top-full left-[-20px] z-20 border border-slate-300 bg-orange-100/50 hidden group-hover:block w-[125px] overflow-y-auto">
                 <li className="w-full p-1 text-center border-slate-400 border-b-2 hover:bg-orange-200">
                   Donation
@@ -257,35 +272,35 @@ function App() {
               </ul>
             </li>
             <li className="tracking-wider  group relative">
-              <p className="cursor-pointer hover:font-bold">GALLERY</p>
+              <p className="cursor-pointer hover:bg-orange-200 p-1">GALLERY</p>
               <ul className="absolute top-full left-[-20px] z-20 border border-slate-300 bg-orange-100/50 hidden group-hover:block w-[125px] overflow-y-auto">
-                <li className="w-full p-1 text-center border-slate-400 border-b-2 hover:bg-orange-200">
+                <li className="w-full p-1 text-center  hover:bg-slate-200 hover:text-orange-500 ">
                   Old Photos
                 </li>
-                <li className="w-full p-1 text-center border-slate-400 border-b-2 hover:bg-orange-200">
+                <li className="w-full p-1 text-center hover:bg-slate-200 hover:text-orange-500">
                   New Photos
                 </li>
-                <li className="w-full p-1 text-center border-slate-400 border-b-2 hover:bg-orange-200">
+                <li className="w-full p-1 text-center hover:bg-slate-200 hover:text-orange-500">
                   Videos
                 </li>
-                <li className="w-full p-1 text-center border-slate-400 border-b-2 hover:bg-orange-200">
+                <li className="w-full p-1 text-center hover:bg-slate-200 hover:text-orange-500">
                   Alumni Contact List
                 </li>
               </ul>
             </li>
             <li className="tracking-wider  group relative">
-              <p className="cursor-pointer hover:font-bold">STORIES</p>
+              <p className="cursor-pointer hover:bg-orange-200 p-1">STORIES</p>
               <ul className="absolute top-full left-[-40px] z-20 border border-slate-300 bg-orange-100/50 hidden group-hover:block">
-                <li className="w-[150px] p-1 text-center border-slate-400 border-b-2  hover:bg-orange-200">
+                <li className="w-[150px] p-1 text-center hover:bg-slate-200 hover:text-orange-500">
                   Alumni Stories
                 </li>
-                <li className="w-full p-1 text-center border-slate-400 border-b-2 hover:bg-orange-200">
+                <li className="w-full p-1 text-center hover:bg-slate-200 hover:text-orange-500">
                   Current Student Stories
                 </li>
-                <li className="w-full p-1 text-center border-slate-400 border-b-2 hover:bg-orange-200">
+                <li className="w-full p-1 text-center hover:bg-slate-200 hover:text-orange-500">
                   Volunteer Stories
                 </li>
-                <li className="w-full p-1 text-center border-slate-400 border-b-2 hover:bg-orange-200">
+                <li className="w-full p-1 text-center hover:bg-slate-200 hover:text-orange-500">
                   Staff Stories
                 </li>
               </ul>
