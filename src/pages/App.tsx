@@ -1,8 +1,8 @@
-// import { useReducer, useState } from "react";
-// import { RxHamburgerMenu } from "react-icons/rx";
-// import { AiOutlineClose } from "react-icons/ai";
-// import { IoIosArrowDropdown } from "react-icons/io";
-// import { IoIosArrowDropup } from "react-icons/io";
+import { useReducer, useState } from "react";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { AiOutlineClose } from "react-icons/ai";
+import { IoIosArrowDropdown } from "react-icons/io";
+import { IoIosArrowDropup } from "react-icons/io";
 
 function reducer(state, action) {
   switch (action.type) {
@@ -237,7 +237,7 @@ function App() {
           )}
         </div>
         {/* normal Menu */}
-        <div className="md:w-4/6">
+        {/* <div className="md:w-4/6">
           <ul className=" hidden md:flex justify-evenly  items-center ">
             <li className=" tracking-widest">ABOUT</li>
             <li className="tracking-wider group relative">
@@ -306,7 +306,7 @@ function App() {
               </ul>
             </li>
           </ul>
-        </div>
+        </div> */}
       </div>
       <div className="w-full h-px bg-gray-300 my-4"></div>
     </div>

@@ -5,7 +5,6 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-import About from "./components/About";
 import Home from "./Home";
 import RootLayout from "./components/RootLayout";
 import Donation from "./components/Giving/Donation";
@@ -28,7 +27,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<Home />} />
-      <Route path="About" element={<About />} />
+      <Route path="About" element={<Home />} />
       <Route path="Gallery">
         <Route path="OldPhotos" element={<OldPhotos />} />
         <Route path="NewPhotos" element={<NewPhotos />} />
