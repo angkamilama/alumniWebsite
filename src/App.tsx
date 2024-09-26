@@ -18,7 +18,7 @@ import OldPhotos from "./components/Gallery/OldPhotos";
 import NewPhotos from "./components/Gallery/NewPhotos";
 import Videos from "./components/Gallery/Videos";
 import CurrentStudents from "./components/Stories/CurrentStudents";
-import OldStudents from "./components/Stories/OldStudents";
+import Alumni from "./components/Stories/Alumni";
 import Staff from "./components/Stories/Staff";
 import Volunteers from "./components/Stories/Volunteers";
 import AlumniContactList from "./components/Gallery/AlumniContactList";
@@ -47,7 +47,7 @@ const router = createBrowserRouter(
       </Route>
       <Route path="Stories">
         <Route path="CurrentStudents" element={<CurrentStudents />} />
-        <Route path="OldStudents" element={<OldStudents />} />
+        <Route path="Alumni" element={<Alumni />} />
         <Route path="Staff" element={<Staff />} />
         <Route path="Volunteers" element={<Volunteers />} />
       </Route>
