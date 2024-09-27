@@ -125,15 +125,15 @@ function RootLayout() {
             {showMenu && (
               <ul className=" w-full h-[680px] bg-slate-200 flex flex-col justify-evenly items-center p-2 ">
                 <NavLink
-                  className=" tracking-widest text-center font-bold  mb-5"
+                  className=" tracking-widest cursor-pointer text-center w-[220px] font-bold hover:text-red-700"
                   onClick={() => setShowMenu(false)}
                   to="/About"
                 >
                   ABOUT
                 </NavLink>
                 <li>
-                  <div className="flex justify-between items-centercursor-pointer w-[220px]">
-                    <p className="hover:text-red-800 mr-6 tracking-widest font-bold">
+                  <div className="flex justify-between items-center cursor-pointer w-[220px]">
+                    <p className="hover:text-red-600 mr-6 tracking-widest font-bold">
                       EVENTS
                     </p>
                     <span>
@@ -141,7 +141,7 @@ function RootLayout() {
                         <IoIosArrowDropup
                           size={25}
                           onClick={() => dispatch({ type: "closeEvents" })}
-                          className="text-red-700"
+                          className=" text-red-700 rounded-xl"
                         />
                       ) : (
                         <IoIosArrowDropdown
@@ -159,21 +159,21 @@ function RootLayout() {
                     <NavLink
                       to="/Events/AlumniCalendar"
                       onClick={() => setShowMenu(false)}
-                      className="w-full p-1 text-center hover:bg-orange-100"
+                      className="w-full p-1 text-center hover:bg-orange-100/50"
                     >
                       Alumni Calendar
                     </NavLink>
                     <NavLink
                       to="/Events/KailashHomeCalendar"
                       onClick={() => setShowMenu(false)}
-                      className="w-full p-1 text-center hover:bg-orange-100"
+                      className="w-full p-1 text-center hover:bg-orange-100/50"
                     >
                       Kailash Home Calendar
                     </NavLink>
                     <NavLink
                       to="/Events/Reunion"
                       onClick={() => setShowMenu(false)}
-                      className="w-full p-1 text-center hover:bg-orange-100"
+                      className="w-full p-1 text-center hover:bg-orange-100/50"
                     >
                       Reunions
                     </NavLink>
@@ -181,7 +181,7 @@ function RootLayout() {
                 </li>
                 <li>
                   <div className="flex justify-between items-center cursor-pointer w-[220px] ">
-                    <p className="hover:text-red-800 mr-6 tracking-widest font-bold">
+                    <p className="hover:text-red-600 mr-6 tracking-widest font-bold">
                       GALLERY
                     </p>
                     <span>
@@ -207,28 +207,28 @@ function RootLayout() {
                     >
                       <NavLink
                         to="/Gallery/OldPhotos"
-                        className="w-full p-1 text-center  hover:bg-orange-100 "
+                        className="w-full p-1 text-center  hover:bg-orange-100/50 "
                         onClick={() => setShowMenu(false)}
                       >
                         Old Photos
                       </NavLink>
                       <NavLink
                         to="/Gallery/NewPhotos"
-                        className="w-full p-1 text-center hover:bg-orange-100"
+                        className="w-full p-1 text-center hover:bg-orange-100/50"
                         onClick={() => setShowMenu(false)}
                       >
                         New Photos
                       </NavLink>
                       <NavLink
                         to="/Gallery/Videos"
-                        className="w-full p-1 text-center hover:bg-orange-100"
+                        className="w-full p-1 text-center hover:bg-orange-100/50"
                         onClick={() => setShowMenu(false)}
                       >
                         Videos
                       </NavLink>
                       <NavLink
                         to="/Gallery/AlumniContactList"
-                        className="w-full p-1 text-center hover:bg-orange-100"
+                        className="w-full p-1 text-center hover:bg-orange-100/50"
                         onClick={() => setShowMenu(false)}
                       >
                         Alumni Contact List
@@ -238,7 +238,7 @@ function RootLayout() {
                 </li>
                 <li>
                   <div className="flex cursor-pointer items-center justify-between w-[220px]">
-                    <p className="hover:text-red-800 mr-6 tracking-widest font-bold">
+                    <p className="hover:text-red-600 mr-6 tracking-widest font-bold">
                       GIVING
                     </p>
                     <span>
@@ -265,28 +265,28 @@ function RootLayout() {
                       <NavLink
                         to="/Giving/Donation"
                         onClick={() => setShowMenu(false)}
-                        className="w-full p-1 text-center border-slate-400  hover:bg-orange-100"
+                        className="w-full p-1 text-center border-slate-400  hover:bg-orange-100/50"
                       >
                         Donation
                       </NavLink>
                       <NavLink
                         to="/Giving/Volunteer"
                         onClick={() => setShowMenu(false)}
-                        className="w-full p-1 text-center border-slate-400  hover:bg-orange-100"
+                        className="w-full p-1 text-center border-slate-400  hover:bg-orange-100/50"
                       >
                         Volunteer
                       </NavLink>
                       <NavLink
                         to="/Giving/MakeAGift"
                         onClick={() => setShowMenu(false)}
-                        className="w-full p-1 text-center border-slate-400  hover:bg-orange-100"
+                        className="w-full p-1 text-center border-slate-400  hover:bg-orange-100/50"
                       >
                         Make a Gift
                       </NavLink>
                       <NavLink
                         to="/Giving/ComeOnBoard"
                         onClick={() => setShowMenu(false)}
-                        className="w-full p-1 text-center border-slate-400  hover:bg-orange-100"
+                        className="w-full p-1 text-center border-slate-400  hover:bg-orange-100/50"
                       >
                         Come on board
                       </NavLink>
@@ -294,8 +294,8 @@ function RootLayout() {
                   </div>
                 </li>
                 <li>
-                  <div className="flex justify-between items-center cursor-pointer w-[220px]">
-                    <p className="hover:text-red-800 mr-6 tracking-widest font-bold">
+                  <div className="flex justify-between items-center cursor-pointer  w-[220px]">
+                    <p className="hover:text-red-600 mr-6 tracking-widest font-bold">
                       Stories
                     </p>
                     <span>
@@ -322,28 +322,28 @@ function RootLayout() {
                       <NavLink
                         to="/Stories/Alumni"
                         onClick={() => setShowMenu(false)}
-                        className="w-[150px] p-1 text-center hover:bg-orange-100"
+                        className="w-[150px] p-1 text-center hover:bg-orange-100/50"
                       >
                         Alumni
                       </NavLink>
                       <NavLink
                         to="/Stories/CurrentStudents"
                         onClick={() => setShowMenu(false)}
-                        className="w-full p-1 text-center hover:bg-orange-100"
+                        className="w-full p-1 text-center hover:bg-orange-100/50"
                       >
                         Current Student
                       </NavLink>
                       <NavLink
                         to="/Stories/Volunteers"
                         onClick={() => setShowMenu(false)}
-                        className="w-full p-1 text-center hover:bg-orange-100"
+                        className="w-full p-1 text-center hover:bg-orange-100/50"
                       >
                         Volunteers
                       </NavLink>
                       <NavLink
                         to="/Stories/Staff"
                         onClick={() => setShowMenu(false)}
-                        className="w-full p-1 text-center hover:bg-orange-100"
+                        className="w-full p-1 text-center hover:bg-orange-100/50"
                       >
                         Staff
                       </NavLink>
@@ -355,30 +355,33 @@ function RootLayout() {
           </div>
           {/* normal Menu */}
         </div>
-        <nav className="border border-blue-600 w-0 md:w-4/6">
+        <nav className="w-0 md:w-4/6">
           <ul className="flex justify-evenly  items-center w-full ">
-            <NavLink to="/About" className=" tracking-widest">
+            <NavLink
+              to="/About"
+              className=" tracking-widest hover:bg-orange-200 p-2"
+            >
               ABOUT
             </NavLink>
             <li className="tracking-wider group relative">
-              <p className="cursor-pointer ">EVENTS</p>
-              <div className=" absolute top-full left-[-20px] z-20 border border-slate-300 bg-orange-100/50 hidden group-hover:block w-[125px] h-[150px]  flex-col justify-between items-center ">
+              <p className="cursor-pointer hover:bg-orange-200 p-2">EVENTS</p>
+              <div className=" absolute top-full left-[-20px] z-20 border border-slate-300 bg-orange-100/50 hidden group-hover:block w-[125px] h-auto  flex-col justify-between items-center ">
                 <ul className="flex flex-col justify-between items-center ">
                   <NavLink
                     to="/Events/AlumniCalendar"
-                    className="w-full p-1 text-center border-slate-400 border-b-2 hover:bg-orange-200"
+                    className="w-full p-1 text-center hover:bg-slate-200"
                   >
                     Alumni Calendar
                   </NavLink>
                   <NavLink
                     to="/Events/KailashHomeCalendar"
-                    className="w-full p-1 text-center border-slate-400 border-b-2 hover:bg-orange-200"
+                    className="w-full p-1 text-center hover:bg-slate-200"
                   >
                     Kailash Home Calendar
                   </NavLink>
                   <NavLink
                     to="/Events/Reunion"
-                    className="w-full p-1 text-center border-slate-400 border-b-2 hover:bg-orange-200"
+                    className="w-full p-1 text-center hover:bg-slate-200"
                   >
                     Reunions
                   </NavLink>
@@ -386,30 +389,30 @@ function RootLayout() {
               </div>
             </li>
             <li className="tracking-wider  group relative">
-              <p className="cursor-pointer">GIVING</p>
+              <p className="cursor-pointer hover:bg-orange-200 p-2">GIVING</p>
               <div className="absolute top-full left-[-20px] z-20 bg-orange-100/50 hidden group-hover:block w-[105px] ">
                 <ul className="flex flex-col justify-between items-center ">
                   <NavLink
                     to="/Giving/Donation"
-                    className="w-full p-1 text-center border-slate-400 border-b-2 hover:bg-orange-200"
+                    className="w-full p-1 text-center hover:bg-slate-200"
                   >
                     Donation
                   </NavLink>
                   <NavLink
                     to="/Giving/Volunteer"
-                    className="w-full p-1 text-center border-slate-400 border-b-2 hover:bg-orange-200"
+                    className="w-full p-1 text-center hover:bg-slate-200"
                   >
                     Volunteer
                   </NavLink>
                   <NavLink
                     to="/Giving/MakeAGift"
-                    className="w-full p-1 text-center border-slate-400 border-b-2 hover:bg-orange-200"
+                    className="w-full p-1 text-center hover:bg-slate-200"
                   >
                     Make a Gift
                   </NavLink>
                   <NavLink
                     to="/Giving/ComeOnBoard"
-                    className="w-full p-1 text-center border-slate-400 border-b-2 hover:bg-orange-200"
+                    className="w-full p-1 text-center hover:bg-slate-200"
                   >
                     Come on board
                   </NavLink>
@@ -417,30 +420,30 @@ function RootLayout() {
               </div>
             </li>
             <li className="tracking-wider  group relative">
-              <p className="cursor-pointer hover:bg-orange-200 p-1">GALLERY</p>
+              <p className="cursor-pointer hover:bg-orange-200 p-2">GALLERY</p>
               <div className="absolute top-full left-[-20px] z-20 border border-slate-300 bg-orange-100/50 hidden group-hover:block w-[125px] overflow-y-auto">
                 <ul className="flex flex-col justify-between items-center ">
                   <NavLink
                     to="/Gallery/OldPhotos"
-                    className="w-full p-1 text-center  hover:bg-slate-200 hover:text-orange-500 "
+                    className="w-full p-1 text-center  hover:bg-slate-200 "
                   >
                     Old Photos
                   </NavLink>
                   <NavLink
                     to="/Gallery/NewPhotos"
-                    className="w-full p-1 text-center hover:bg-slate-200 hover:text-orange-500"
+                    className="w-full p-1 text-center hover:bg-slate-200"
                   >
                     New Photos
                   </NavLink>
                   <NavLink
                     to="/Gallery/Videos"
-                    className="w-full p-1 text-center hover:bg-slate-200 hover:text-orange-500"
+                    className="w-full p-1 text-center hover:bg-slate-200"
                   >
                     Videos
                   </NavLink>
                   <NavLink
                     to="/Gallery/AlumniContactList"
-                    className="w-full p-1 text-center hover:bg-slate-200 hover:text-orange-500"
+                    className="w-full p-1 text-center hover:bg-slate-200"
                   >
                     Alumni List
                   </NavLink>
@@ -448,30 +451,30 @@ function RootLayout() {
               </div>
             </li>
             <li className="tracking-wider  group relative">
-              <p className="cursor-pointer hover:bg-orange-200 p-1">STORIES</p>
+              <p className="cursor-pointer hover:bg-orange-200 p-2">STORIES</p>
               <div className="absolute top-full left-[-40px] z-20 border border-slate-300 bg-orange-100/50 hidden group-hover:block">
                 <ul className="flex flex-col justify-between items-center ">
                   <NavLink
                     to="/Stories/Alumni"
-                    className="w-[150px] p-1 text-center hover:bg-slate-200 hover:text-orange-500"
+                    className="w-[150px] p-1 text-center hover:bg-slate-200"
                   >
                     Alumni
                   </NavLink>
                   <NavLink
                     to="/Stories/CurrentStudents"
-                    className="w-full p-1 text-center hover:bg-slate-200 hover:text-orange-500"
+                    className="w-full p-1 text-center hover:bg-slate-200"
                   >
                     Current Student
                   </NavLink>
                   <NavLink
                     to="/Stories/Volunteers"
-                    className="w-full p-1 text-center hover:bg-slate-200 hover:text-orange-500"
+                    className="w-full p-1 text-center hover:bg-slate-200"
                   >
                     Volunteer
                   </NavLink>
                   <NavLink
                     to="/Stories/Staff"
-                    className="w-full p-1 text-center hover:bg-slate-200 hover:text-orange-500"
+                    className="w-full p-1 text-center hover:bg-slate-200"
                   >
                     Staff
                   </NavLink>
