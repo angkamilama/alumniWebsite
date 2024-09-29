@@ -65,7 +65,7 @@ function Home() {
         </div>
       </div>
       {/* News Section */}
-      <div className="border-2 border-slate-500 md:h-auto w-screen flex flex-wrap flex-col justify-around items-center md:flex-row p-6">
+      <div className="border-2 border-slate-500 md:h-auto w-screen flex flex-wrap flex-col justify-around items-center  md:flex-row p-6">
         <div className="flex flex-col justify-evenly items-center h-[150px] mb-8 md:w-full">
           <div className=" border border-20 h-2 bg-orange-700 w-1/6"></div>
           <p className="text-orange-700 font-bold">READ, WATCH AND LISTEN</p>
@@ -74,28 +74,28 @@ function Home() {
             alumni impact on Kailash home and more...
           </p>
         </div>
-        <div className="border border-dotted border-slate-700 flex flex-col justify-evenly items-center h-auto mb-8 p-2 shadow-lg shadow-gray-400">
+        <div className="border border-dotted border-slate-700 flex flex-col justify-evenly items-center h-auto mb-8 p-2 shadow-lg shadow-gray-400 hover:scale-105 transform transition-all ease-in-out">
           <img src={knitting} className="h-[250px] w-[300px] mb-5" />
           <p className="text-orange-700 font-bold mb-5">AUMNI & FRIENDS</p>
           <NavLink to="/News/News1" className="hover:underline mb-5">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, quam.
           </NavLink>
         </div>
-        <div className="border border-dotted border-slate-700 flex flex-col justify-evenly items-center h-auto mb-8 p-2 shadow-lg shadow-gray-400">
-          <img src={pottermaking} className="h-[250px] w-[300px] mb-5" />
+        <div className="border border-dotted border-slate-700 flex flex-col justify-evenly items-center h-auto mb-8 p-2 shadow-lg shadow-gray-400 hover:scale-105 transform transition-all ease-in-out">
+          <img src={pottermaking} className="h-[250px] w-[300px] mb-5 " />
           <p className="text-orange-700 font-bold mb-5">AUMNI & FRIENDS</p>
           <NavLink to="/News/News2" className="hover:underline mb-5">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, quam.
           </NavLink>
         </div>
-        <div className="border border-dotted border-slate-700 flex flex-col justify-evenly items-center h-auto mb-8 p-2 shadow-lg shadow-gray-400">
+        <div className="border border-dotted border-slate-700 flex flex-col justify-evenly items-center h-auto mb-8 p-2 shadow-lg shadow-gray-400 hover:scale-105 transform transition-all ease-in-out">
           <img src={wallpainting} className="h-[250px] w-[300px] mb-5" />
           <p className="text-orange-700 font-bold mb-5">AUMNI & FRIENDS</p>
           <NavLink to="/News/News3" className="hover:underline mb-5">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, quam.
           </NavLink>
         </div>
-        <div className="border border-dotted border-slate-700 flex flex-col justify-evenly items-center h-auto mb-8 p-2 shadow-lg shadow-gray-400">
+        <div className="border border-dotted border-slate-700 flex flex-col justify-evenly items-center h-auto mb-8 p-2 shadow-lg shadow-gray-400 hover:scale-105 transform transition-all ease-in-out">
           <img src={knitting} className="h-[250px] w-[300px] mb-5" />
           <p className="text-orange-700 font-bold mb-5">AUMNI & FRIENDS</p>
           <NavLink to="/News/News4" className="hover:underline mb-5">

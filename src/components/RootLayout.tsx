@@ -5,7 +5,22 @@ import { AiOutlineClose } from "react-icons/ai";
 import { IoIosArrowDropdown } from "react-icons/io";
 import { IoIosArrowDropup } from "react-icons/io";
 
-function reducer(state, action) {
+interface InitialStateType {
+  about: boolean;
+  events: boolean;
+  gallery: boolean;
+  giving: boolean;
+  stories: boolean;
+}
+let initialState = {
+  about: false,
+  events: false,
+  gallery: false,
+  giving: false,
+  stories: false,
+};
+
+function reducer(state: InitialStateType, action: { type: string }) {
   switch (action.type) {
     case "showEvents": {
       return {
@@ -82,14 +97,6 @@ function reducer(state, action) {
   }
 }
 
-let initialState = {
-  about: false,
-  events: false,
-  gallery: false,
-  giving: false,
-  stories: false,
-};
-
 function RootLayout() {
   const [showMenu, setShowMenu] = useState(false);
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -121,9 +128,9 @@ function RootLayout() {
             </div>
           </div>
           {/* dropdown Menu */}
-          <div className="w-full absolute top-20 right-1 md:hidden z-10">
+          <div className="w-full  absolute top-20 right-1 md:hidden z-10">
             {showMenu && (
-              <ul className=" w-full h-[680px] bg-slate-200 flex flex-col justify-evenly items-center p-2 ">
+              <ul className=" w-full h-screen bg-slate-200 flex flex-col justify-evenly items-center p-2 ">
                 <NavLink
                   className=" tracking-widest cursor-pointer text-center w-[220px] font-bold hover:text-red-700"
                   onClick={() => setShowMenu(false)}
@@ -359,29 +366,29 @@ function RootLayout() {
           <ul className="flex justify-evenly  items-center w-full ">
             <NavLink
               to="/About"
-              className=" tracking-widest hover:bg-orange-200 p-2"
+              className=" tracking-widest hover:bg-slate-300 p-2"
             >
               ABOUT
             </NavLink>
             <li className="tracking-wider group relative">
-              <p className="cursor-pointer hover:bg-orange-200 p-2">EVENTS</p>
-              <div className=" absolute top-full left-[-20px] z-20 border border-slate-300 bg-orange-100/50 hidden group-hover:block w-[125px] h-auto  flex-col justify-between items-center ">
+              <p className="cursor-pointer hover:bg-slate-100 p-2">EVENTS</p>
+              <div className=" absolute top-full left-[-20px] z-20 border border-slate-300 bg-slate-300 hidden group-hover:block w-[125px] h-auto  flex-col justify-between items-center ">
                 <ul className="flex flex-col justify-between items-center ">
                   <NavLink
                     to="/Events/AlumniCalendar"
-                    className="w-full p-1 text-center hover:bg-slate-200"
+                    className="w-full p-1 text-center hover:bg-orange-100/50"
                   >
                     Alumni Calendar
                   </NavLink>
                   <NavLink
                     to="/Events/KailashHomeCalendar"
-                    className="w-full p-1 text-center hover:bg-slate-200"
+                    className="w-full p-1 text-center hover:bg-orange-100/50"
                   >
                     Kailash Home Calendar
                   </NavLink>
                   <NavLink
                     to="/Events/Reunion"
-                    className="w-full p-1 text-center hover:bg-slate-200"
+                    className="w-full p-1 text-center hover:bg-orange-100/50"
                   >
                     Reunions
                   </NavLink>
@@ -389,30 +396,30 @@ function RootLayout() {
               </div>
             </li>
             <li className="tracking-wider  group relative">
-              <p className="cursor-pointer hover:bg-orange-200 p-2">GIVING</p>
-              <div className="absolute top-full left-[-20px] z-20 bg-orange-100/50 hidden group-hover:block w-[105px] ">
+              <p className="cursor-pointer hover:bg-slate-100  p-2">GIVING</p>
+              <div className="absolute top-full left-[-20px] z-20 bg-slate-300 hidden group-hover:block w-[105px] ">
                 <ul className="flex flex-col justify-between items-center ">
                   <NavLink
                     to="/Giving/Donation"
-                    className="w-full p-1 text-center hover:bg-slate-200"
+                    className="w-full p-1 text-center hover:bg-orange-100/50"
                   >
                     Donation
                   </NavLink>
                   <NavLink
                     to="/Giving/Volunteer"
-                    className="w-full p-1 text-center hover:bg-slate-200"
+                    className="w-full p-1 text-center hover:bg-orange-100/50"
                   >
                     Volunteer
                   </NavLink>
                   <NavLink
                     to="/Giving/MakeAGift"
-                    className="w-full p-1 text-center hover:bg-slate-200"
+                    className="w-full p-1 text-center hover:bg-orange-100/50"
                   >
                     Make a Gift
                   </NavLink>
                   <NavLink
                     to="/Giving/ComeOnBoard"
-                    className="w-full p-1 text-center hover:bg-slate-200"
+                    className="w-full p-1 text-center hover:bg-orange-100/50"
                   >
                     Come on board
                   </NavLink>
@@ -420,30 +427,30 @@ function RootLayout() {
               </div>
             </li>
             <li className="tracking-wider  group relative">
-              <p className="cursor-pointer hover:bg-orange-200 p-2">GALLERY</p>
-              <div className="absolute top-full left-[-20px] z-20 border border-slate-300 bg-orange-100/50 hidden group-hover:block w-[125px] overflow-y-auto">
+              <p className="cursor-pointer hover:bg-slate-100  p-2">GALLERY</p>
+              <div className="absolute top-full left-[-20px] z-20 border border-slate-300 bg-slate-300 hidden group-hover:block w-[125px] overflow-y-auto">
                 <ul className="flex flex-col justify-between items-center ">
                   <NavLink
                     to="/Gallery/OldPhotos"
-                    className="w-full p-1 text-center  hover:bg-slate-200 "
+                    className="w-full p-1 text-center  hover:bg-orange-100/50 "
                   >
                     Old Photos
                   </NavLink>
                   <NavLink
                     to="/Gallery/NewPhotos"
-                    className="w-full p-1 text-center hover:bg-slate-200"
+                    className="w-full p-1 text-center hover:bg-orange-100/50"
                   >
                     New Photos
                   </NavLink>
                   <NavLink
                     to="/Gallery/Videos"
-                    className="w-full p-1 text-center hover:bg-slate-200"
+                    className="w-full p-1 text-center hover:bg-orange-100/50"
                   >
                     Videos
                   </NavLink>
                   <NavLink
                     to="/Gallery/AlumniContactList"
-                    className="w-full p-1 text-center hover:bg-slate-200"
+                    className="w-full p-1 text-center hover:bg-orange-100/50"
                   >
                     Alumni List
                   </NavLink>
@@ -451,30 +458,30 @@ function RootLayout() {
               </div>
             </li>
             <li className="tracking-wider  group relative">
-              <p className="cursor-pointer hover:bg-orange-200 p-2">STORIES</p>
-              <div className="absolute top-full left-[-40px] z-20 border border-slate-300 bg-orange-100/50 hidden group-hover:block">
+              <p className="cursor-pointer hover:bg-slate-100  p-2">STORIES</p>
+              <div className="absolute top-full left-[-40px] z-20 border border-slate-300 bg-slate-300 hidden group-hover:block">
                 <ul className="flex flex-col justify-between items-center ">
                   <NavLink
                     to="/Stories/Alumni"
-                    className="w-[150px] p-1 text-center hover:bg-slate-200"
+                    className="w-[150px] p-1 text-center hover:bg-orange-100/50"
                   >
                     Alumni
                   </NavLink>
                   <NavLink
                     to="/Stories/CurrentStudents"
-                    className="w-full p-1 text-center hover:bg-slate-200"
+                    className="w-full p-1 text-center hover:bg-orange-100/50"
                   >
                     Current Student
                   </NavLink>
                   <NavLink
                     to="/Stories/Volunteers"
-                    className="w-full p-1 text-center hover:bg-slate-200"
+                    className="w-full p-1 text-center hover:bg-orange-100/50"
                   >
                     Volunteer
                   </NavLink>
                   <NavLink
                     to="/Stories/Staff"
-                    className="w-full p-1 text-center hover:bg-slate-200"
+                    className="w-full p-1 text-center hover:bg-orange-100/50"
                   >
                     Staff
                   </NavLink>
