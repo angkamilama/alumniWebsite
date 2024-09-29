@@ -102,7 +102,7 @@ function RootLayout() {
   };
   return (
     <div className="box-border  flex-col scroll-smooth">
-      <div className="flex  justify-between items-center w-screen">
+      <div className="flex  justify-between items-center w-screen fixed top-0 left-0 z-50 bg-white shadow-lg">
         <div className="flex justify-evenly items-center w-full md:w-1/6 mt-5 mb-0">
           <div className="flex justify-around items-center w-full md:w-2/6">
             <img
@@ -355,7 +355,7 @@ function RootLayout() {
           </div>
           {/* normal Menu */}
         </div>
-        <nav className="w-0 md:w-4/6">
+        <nav className="w-0 md:w-4/6 ">
           <ul className="flex justify-evenly  items-center w-full ">
             <NavLink
               to="/About"
@@ -484,7 +484,7 @@ function RootLayout() {
           </ul>
         </nav>
       </div>
-      <div className="border border-green-300 w-screen">
+      <div className=" w-screen mt-[100px]">
         <Outlet />
       </div>
     </div>

@@ -22,6 +22,10 @@ import Alumni from "./components/Stories/Alumni";
 import Staff from "./components/Stories/Staff";
 import Volunteers from "./components/Stories/Volunteers";
 import AlumniContactList from "./components/Gallery/AlumniContactList";
+import News1 from "./components/News/News1";
+import News2 from "./components/News/News2";
+import News3 from "./components/News/News3";
+import News4 from "./components/News/News4";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -50,6 +54,12 @@ const router = createBrowserRouter(
         <Route path="Alumni" element={<Alumni />} />
         <Route path="Staff" element={<Staff />} />
         <Route path="Volunteers" element={<Volunteers />} />
+      </Route>
+      <Route path="News">
+        <Route path="News1" element={<News1 />} />
+        <Route path="News2" element={<News2 />} />
+        <Route path="News3" element={<News3 />} />
+        <Route path="News4" element={<News4 />} />
       </Route>
     </Route>
   )
