@@ -366,9 +366,9 @@ function RootLayout() {
           <ul className="flex justify-evenly  items-center w-full ">
             <NavLink
               to="/About"
-              className=" tracking-widest hover:bg-slate-300 p-2"
+              className=" tracking-widest hover:bg-slate-100 p-2"
             >
-              ABOUT
+              HOME
             </NavLink>
             <li className="tracking-wider group relative">
               <p className="cursor-pointer hover:bg-slate-100 p-2">EVENTS</p>
@@ -376,19 +376,19 @@ function RootLayout() {
                 <ul className="flex flex-col justify-between items-center ">
                   <NavLink
                     to="/Events/AlumniCalendar"
-                    className="w-full p-1 text-center hover:bg-orange-100/50"
+                    className="w-full p-2 text-center hover:bg-orange-100/50 mb-3"
                   >
                     Alumni Calendar
                   </NavLink>
                   <NavLink
                     to="/Events/KailashHomeCalendar"
-                    className="w-full p-1 text-center hover:bg-orange-100/50"
+                    className="w-full p-2 text-center hover:bg-orange-100/50 mb-3"
                   >
                     Kailash Home Calendar
                   </NavLink>
                   <NavLink
                     to="/Events/Reunion"
-                    className="w-full p-1 text-center hover:bg-orange-100/50"
+                    className="w-full p-2 text-center hover:bg-orange-100/50 mb-1"
                   >
                     Reunions
                   </NavLink>
@@ -397,29 +397,29 @@ function RootLayout() {
             </li>
             <li className="tracking-wider  group relative">
               <p className="cursor-pointer hover:bg-slate-100  p-2">GIVING</p>
-              <div className="absolute top-full left-[-20px] z-20 bg-slate-300 hidden group-hover:block w-[105px] ">
+              <div className="absolute top-full left-[-20px] z-20 bg-slate-300 hidden group-hover:block w-[125px] ">
                 <ul className="flex flex-col justify-between items-center ">
                   <NavLink
                     to="/Giving/Donation"
-                    className="w-full p-1 text-center hover:bg-orange-100/50"
+                    className="w-full p-2 text-center hover:bg-orange-100/50 mb-3"
                   >
                     Donation
                   </NavLink>
                   <NavLink
                     to="/Giving/Volunteer"
-                    className="w-full p-1 text-center hover:bg-orange-100/50"
+                    className="w-full p-2 text-center hover:bg-orange-100/50 mb-3"
                   >
                     Volunteer
                   </NavLink>
                   <NavLink
                     to="/Giving/MakeAGift"
-                    className="w-full p-1 text-center hover:bg-orange-100/50"
+                    className="w-full p-2 text-center hover:bg-orange-100/50 mb-3"
                   >
                     Make a Gift
                   </NavLink>
                   <NavLink
                     to="/Giving/ComeOnBoard"
-                    className="w-full p-1 text-center hover:bg-orange-100/50"
+                    className="w-full p-2 text-center hover:bg-orange-100/50 mb-1"
                   >
                     Come on board
                   </NavLink>
@@ -432,25 +432,25 @@ function RootLayout() {
                 <ul className="flex flex-col justify-between items-center ">
                   <NavLink
                     to="/Gallery/OldPhotos"
-                    className="w-full p-1 text-center  hover:bg-orange-100/50 "
+                    className="w-full p-2 text-center  hover:bg-orange-100/50  mb-3"
                   >
                     Old Photos
                   </NavLink>
                   <NavLink
                     to="/Gallery/NewPhotos"
-                    className="w-full p-1 text-center hover:bg-orange-100/50"
+                    className="w-full p-2 text-center hover:bg-orange-100/50 mb-3"
                   >
                     New Photos
                   </NavLink>
                   <NavLink
                     to="/Gallery/Videos"
-                    className="w-full p-1 text-center hover:bg-orange-100/50"
+                    className="w-full p-2 text-center hover:bg-orange-100/50 mb-3"
                   >
                     Videos
                   </NavLink>
                   <NavLink
                     to="/Gallery/AlumniContactList"
-                    className="w-full p-1 text-center hover:bg-orange-100/50"
+                    className="w-full p-2 text-center hover:bg-orange-100/50 mb-1"
                   >
                     Alumni List
                   </NavLink>
@@ -463,25 +463,25 @@ function RootLayout() {
                 <ul className="flex flex-col justify-between items-center ">
                   <NavLink
                     to="/Stories/Alumni"
-                    className="w-[150px] p-1 text-center hover:bg-orange-100/50"
+                    className="w-[150px] p-2 text-center hover:bg-orange-100/50 mb-3"
                   >
                     Alumni
                   </NavLink>
                   <NavLink
                     to="/Stories/CurrentStudents"
-                    className="w-full p-1 text-center hover:bg-orange-100/50"
+                    className="w-full p-2 text-center hover:bg-orange-100/50 mb-3"
                   >
                     Current Student
                   </NavLink>
                   <NavLink
                     to="/Stories/Volunteers"
-                    className="w-full p-1 text-center hover:bg-orange-100/50"
+                    className="w-full p-2 text-center hover:bg-orange-100/50 mb-3"
                   >
                     Volunteer
                   </NavLink>
                   <NavLink
                     to="/Stories/Staff"
-                    className="w-full p-1 text-center hover:bg-orange-100/50"
+                    className="w-full p-2 text-center hover:bg-orange-100/50 mb-1"
                   >
                     Staff
                   </NavLink>

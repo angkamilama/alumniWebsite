@@ -26,6 +26,9 @@ import News1 from "./components/News/News1";
 import News2 from "./components/News/News2";
 import News3 from "./components/News/News3";
 import News4 from "./components/News/News4";
+import Networking from "./components/Grow/Networking";
+import Mentoring from "./components/Grow/Mentoring";
+import Careers from "./components/Grow/Careers";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -60,6 +63,11 @@ const router = createBrowserRouter(
         <Route path="News2" element={<News2 />} />
         <Route path="News3" element={<News3 />} />
         <Route path="News4" element={<News4 />} />
+      </Route>
+      <Route path="Grow">
+        <Route path="Networking" element={<Networking />} />
+        <Route path="Mentoring" element={<Mentoring />} />
+        <Route path="Careers" element={<Careers />} />
       </Route>
     </Route>
   )
