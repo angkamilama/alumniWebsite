@@ -1,5 +1,6 @@
-import KailashBuilding from "../public/Kailash-main-building.jpeg";
+import { useState } from "react";
 
+import KailashBuilding from "../public/Kailash-main-building.jpeg";
 import { NavLink } from "react-router-dom";
 import knitting from "../public/News/knitting.jpg";
 import pottermaking from "../public/News/potterymaking.jpeg";
@@ -11,15 +12,41 @@ import eventCalendar from "../public/eventCalendar.svg";
 import sharingTalent from "../public/SharingTalent.jpg";
 import growingHand from "../public/GrowingHand.jpg";
 import sharingJourney from "../public/sharingJourney.png";
+import facebookIcon from "../public/icons/facebookIcon.png";
+import instagram from "../public/icons/instagram.png";
+import tiktok from "../public/icons/tiktok.png";
+import twitter from "../public/icons/twitter.png";
+import OpeningSlider from "./openingSlider";
+
+interface ContactDataType {
+  email: string;
+  subject: string;
+  message: string;
+}
+
+const initialData = {
+  email: "",
+  subject: "",
+  message: "",
+};
+
 function Home() {
+  const [contactData, setContactData] = useState<ContactDataType>(initialData);
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    setContactData(initialData);
+  };
+
   return (
     <>
-      <div
+      {/* <div
         className=" md:bg-contain bg-no-repeat bg-center bg-cover h-[600px] w-full contrast-75 "
         style={{
           backgroundImage: `url(${KailashBuilding})`,
         }}
-      ></div>
+      ></div> */}
+      <OpeningSlider />
       <div className="h-50">
         <p className="text-xl mb-6 w-2/3 tracking-wider  mx-auto p-4">
           "Success isn't just about where you end up — it's about the
@@ -139,7 +166,7 @@ function Home() {
             to="/Grow/Careers"
             className=" text-center w-5/6 bg-green-950/75 text-white p-3 hover:bg-gray-600 hover:text-white"
           >
-            Learn More About Careers
+            Learn About Careers
           </NavLink>
         </div>
         <div className=" w-5/6 md:w-1/4 border border-dotted border-slate-700 flex flex-col justify-evenly items-center md:h-[450px] mb-8 p-3 shadow-lg shadow-gray-400 rounded-2xl">
@@ -178,41 +205,60 @@ function Home() {
               Do you want to contact us? It would be pleasure for us to fulfill
               your queries.
             </p>
-            <form action="#" className="space-y-8 p-3">
+            <form onSubmit={handleSubmit} className="space-y-8 p-3">
               <div>
                 <label className="block mb-2 text-sm font-medium ">
                   Your email
+                  <input
+                    type="email"
+                    className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg outline-dashed"
+                    placeholder="abc@gmail.com"
+                    required
+                    value={contactData.email}
+                    onChange={(e) =>
+                      setContactData({
+                        ...contactData,
+                        email: e.target.value,
+                      })
+                    }
+                  />
                 </label>
-                <input
-                  type="email"
-                  id="email"
-                  className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg outline-dashed"
-                  placeholder="abc@gmail.com"
-                  required
-                />
               </div>
               <div>
                 <label className="block mb-2 text-sm font-medium ">
                   Subject
+                  <input
+                    type="text"
+                    className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg outline-dashed"
+                    placeholder="Let us know how we can help you"
+                    value={contactData.subject}
+                    onChange={(e) =>
+                      setContactData({
+                        ...contactData,
+                        subject: e.target.value,
+                      })
+                    }
+                    required
+                  />
                 </label>
-                <input
-                  type="text"
-                  id="subject"
-                  className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg outline-dashed"
-                  placeholder="Let us know how we can help you"
-                  required
-                />
               </div>
               <div className="sm:col-span-2">
                 <label className="block mb-2 text-sm font-medium">
                   Your message
+                  <textarea
+                    id="message"
+                    rows={6}
+                    className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:focus:ring-primary-500 dark:focus:border-primary-500 outline-dashed"
+                    placeholder="Leave a comment..."
+                    value={contactData.message}
+                    onChange={(e) =>
+                      setContactData({
+                        ...contactData,
+                        message: e.target.value,
+                      })
+                    }
+                  ></textarea>
                 </label>
-                <textarea
-                  id="message"
-                  rows={6}
-                  className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:focus:ring-primary-500 dark:focus:border-primary-500 outline-dashed"
-                  placeholder="Leave a comment..."
-                ></textarea>
               </div>
               <button
                 type="submit"
@@ -223,6 +269,28 @@ function Home() {
             </form>
           </div>
         </section>
+      </div>
+      <div className="flex flex-col justify-evenly items-center md:flex-row w-screen md:w-2/3 p-3 md:mx-auto">
+        <div className="w-3/4 md:w-full my-5">
+          <p className=" text-center text-xl font-bold md:underline text-orange-700/75 mb-1">
+            Get in Touch
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam
+            perferendis mollitia veniam nemo error?
+          </p>
+        </div>
+        <div className="flex flex-col justify-between items-center my-5 w-2/4">
+          <p className="mb-5 text-lg font-bold text-slate-500 underline">
+            Follow us on:
+          </p>
+          <div className="w-full  flex justify-evenly items-center">
+            <img src={instagram} className="w-[40px] h-[40px]" />
+            <img src={twitter} className="w-[40px] h-[40px]" />
+            <img src={facebookIcon} className="w-[40px] h-[40px]" />
+            <img src={tiktok} className="w-[40px] h-[40px]" />
+          </div>
+        </div>
       </div>
     </>
   );
